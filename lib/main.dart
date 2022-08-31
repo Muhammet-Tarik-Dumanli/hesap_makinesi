@@ -81,16 +81,18 @@ class _HesapMakinesiState extends State<HesapMakinesi> {
 
   buildButton(String buttonText) {
     return Expanded(
-        child: OutlinedButton(
-          //padding: EdgeInsets.all(24),
-          child: Text(
-            buttonText,
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+        child: Padding(
+          padding: const EdgeInsets.all(8),
+          child: OutlinedButton(
+            child: Text(
+              buttonText,
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+            onPressed: () => {buttonPressed(buttonText)},
           ),
-          onPressed: () => {buttonPressed(buttonText)},
         ));
   }
 
